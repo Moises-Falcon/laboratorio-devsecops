@@ -1,0 +1,46 @@
+﻿.\.venv\Scripts\python.exe : Found 37 known vulnerabilities in 3 packages
+En línea: 1 Carácter: 719
++ ... nicial.txt; .\.venv\Scripts\python.exe -m pip_audit -r requirements-a ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Found 37 known ...s in 3 packages:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Name     Version ID              Fix Versions
+-------- ------- --------------- -------------
+requests 2.19.1  PYSEC-2018-28   2.20.0
+requests 2.19.1  PYSEC-2018-28   2.20.0
+requests 2.19.1  PYSEC-2023-74   2.31.0
+requests 2.19.1  PYSEC-2023-74   2.31.0
+requests 2.19.1  PYSEC-2026-1873 2.32.0
+requests 2.19.1  PYSEC-2026-1872 2.32.4
+requests 2.19.1  PYSEC-2026-2275 2.33.0
+requests 2.19.1  PYSEC-2026-1873 2.32.0
+requests 2.19.1  PYSEC-2026-1872 2.32.4
+requests 2.19.1  PYSEC-2026-2275 2.33.0
+idna     2.7     PYSEC-2024-60   3.7
+idna     2.7     PYSEC-2024-60   3.7
+idna     2.7     PYSEC-2026-215  3.15
+idna     2.7     PYSEC-2026-215  3.15
+urllib3  1.23    PYSEC-2019-133  1.24.2
+urllib3  1.23    PYSEC-2019-132  1.24.3
+urllib3  1.23    PYSEC-2020-148  1.25.9
+urllib3  1.23    PYSEC-2019-133  1.24.2
+urllib3  1.23    PYSEC-2020-148  1.25.9
+urllib3  1.23    PYSEC-2019-132  1.24.3
+urllib3  1.23    PYSEC-2026-1995 1.26.19,2.2.2
+urllib3  1.23    PYSEC-2023-192  1.26.17,2.0.6
+urllib3  1.23    PYSEC-2023-192  1.26.17,2.0.6
+urllib3  1.23    PYSEC-2023-207  1.24.2
+urllib3  1.23    PYSEC-2023-212  1.26.18,2.0.7
+urllib3  1.23    PYSEC-2023-207  1.24.2
+urllib3  1.23    PYSEC-2023-212  1.26.18,2.0.7
+urllib3  1.23    PYSEC-2026-1999 2.5.0
+urllib3  1.23    PYSEC-2026-1994 2.6.0
+urllib3  1.23    PYSEC-2026-1996 2.6.3
+urllib3  1.23    PYSEC-2026-141  2.7.0
+urllib3  1.23    PYSEC-2026-141  2.7.0
+urllib3  1.23    PYSEC-2026-1999 2.5.0
+urllib3  1.23    PYSEC-2026-1995 1.26.19,2.2.2
+urllib3  1.23    PYSEC-2026-1994 2.6.0
+urllib3  1.23    PYSEC-2026-1996 2.6.3
+urllib3  1.23    PYSEC-2026-4177 2.8.0

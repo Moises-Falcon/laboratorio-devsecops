@@ -1,0 +1,5 @@
+﻿# Manifiesto educativo para auditoria SCA; NO instalar.
+# Dependencia de un componente hipotetico, no importada por src/.
+requests==2.33.0
+urllib3==2.8.0
+idna==3.15

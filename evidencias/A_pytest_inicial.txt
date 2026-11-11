@@ -1,0 +1,31 @@
+﻿.F....F                                                                  [100%]
+================================== FAILURES ===================================
+____________________________ test_write_is_denied _____________________________
+
+    def test_write_is_denied():
+>       assert is_operation_allowed("write") is False
+E       AssertionError: assert True is False
+E        +  where True = is_operation_allowed('write')
+
+tests\test_telemetry.py:9: AssertionError
+_________________ test_write_cannot_read_or_modify_telemetry __________________
+
+    def test_write_cannot_read_or_modify_telemetry():
+>       assert get_telemetry("write", "temperature") == {
+            "status": "denied", "operation": "write"
+        }
+E       AssertionError: assert {'status': 'o...'value': 24.5} == {'status': 'd...ion': 'write'}
+E         
+E         Differing items:
+E         {'status': 'ok'} != {'status': 'denied'}
+E         Left contains 2 more items:
+E         {'measurement': 'temperature', 'value': 24.5}
+E         Right contains 1 more item:
+E         {'operation': 'write'}
+E         Use -v to get more diff
+
+tests\test_telemetry.py:33: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_telemetry.py::test_write_is_denied - AssertionError: assert...
+FAILED tests/test_telemetry.py::test_write_cannot_read_or_modify_telemetry - ...
+2 failed, 5 passed in 0.35s
