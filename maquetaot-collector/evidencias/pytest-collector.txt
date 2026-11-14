@@ -1,0 +1,43 @@
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.2.0, pluggy-1.7.0 -- C:\Laboratorio final individual\Laboratorio_Final_DevSecOps_Alumnos\laboratorio_final_devsecops\maquetaot-collector\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Laboratorio final individual\Laboratorio_Final_DevSecOps_Alumnos\laboratorio_final_devsecops\maquetaot-collector
+configfile: pytest.ini
+testpaths: tests
+plugins: anyio-4.16.0, platformdirs-4.14.5
+collecting ... collected 32 items
+
+tests/test_collector_opcua_local.py::test_cliente_confiable_con_usuario_correcto_escribe_y_lee PASSED [  3%]
+tests/test_collector_opcua_local.py::test_las_muestras_validas_se_envian_al_almacenamiento PASSED [  6%]
+tests/test_collector_opcua_local.py::test_usuario_scada_no_puede_crear_nodos PASSED [  9%]
+tests/test_collector_opcua_local.py::test_contrasena_incorrecta_es_rechazada PASSED [ 12%]
+tests/test_collector_opcua_local.py::test_certificado_no_confiable_es_rechazado PASSED [ 15%]
+tests/test_collector_tags.py::test_tags_csv_carga_15_tags PASSED         [ 18%]
+tests/test_collector_tags.py::test_tags_sin_duplicados_y_con_tipos_esperados PASSED [ 21%]
+tests/test_collector_tags.py::test_csv_con_duplicado_se_rechaza PASSED   [ 25%]
+tests/test_collector_tags.py::test_csv_con_tipo_no_soportado_se_rechaza PASSED [ 28%]
+tests/test_collector_tags.py::test_csv_con_rango_invertido_se_rechaza PASSED [ 31%]
+tests/test_collector_tags.py::test_tag_fuera_de_la_lista_se_rechaza PASSED [ 34%]
+tests/test_collector_tags.py::test_boolean_acepta_bool PASSED            [ 37%]
+tests/test_collector_tags.py::test_boolean_rechaza_otros_tipos[1] PASSED [ 40%]
+tests/test_collector_tags.py::test_boolean_rechaza_otros_tipos[0] PASSED [ 43%]
+tests/test_collector_tags.py::test_boolean_rechaza_otros_tipos[true] PASSED [ 46%]
+tests/test_collector_tags.py::test_boolean_rechaza_otros_tipos[1.0] PASSED [ 50%]
+tests/test_collector_tags.py::test_boolean_rechaza_otros_tipos[None] PASSED [ 53%]
+tests/test_collector_tags.py::test_double_acepta_numeros PASSED          [ 56%]
+tests/test_collector_tags.py::test_double_rechaza_tipos_y_valores_invalidos[7.2] PASSED [ 59%]
+tests/test_collector_tags.py::test_double_rechaza_tipos_y_valores_invalidos[None] PASSED [ 62%]
+tests/test_collector_tags.py::test_double_rechaza_tipos_y_valores_invalidos[True] PASSED [ 65%]
+tests/test_collector_tags.py::test_double_rechaza_tipos_y_valores_invalidos[nan] PASSED [ 68%]
+tests/test_collector_tags.py::test_double_rechaza_tipos_y_valores_invalidos[inf] PASSED [ 71%]
+tests/test_collector_tags.py::test_rango_se_aplica_solo_si_esta_definido PASSED [ 75%]
+tests/test_collector_tags.py::test_tags_del_repositorio_no_definen_rangos PASSED [ 78%]
+tests/test_collector_tags.py::test_contrasena_correcta_e_incorrecta PASSED [ 81%]
+tests/test_collector_tags.py::test_hash_mal_formado_no_autentica[] PASSED [ 84%]
+tests/test_collector_tags.py::test_hash_mal_formado_no_autentica[x] PASSED [ 87%]
+tests/test_collector_tags.py::test_hash_mal_formado_no_autentica[a$b$c$d] PASSED [ 90%]
+tests/test_collector_tags.py::test_hash_mal_formado_no_autentica[pbkdf2_sha256$no_es_numero$00$00] PASSED [ 93%]
+tests/test_collector_tags.py::test_hash_no_contiene_la_contrasena PASSED [ 96%]
+tests/test_collector_tags.py::test_sql_es_parametrizada_y_fila_booleana_y_numerica PASSED [100%]
+
+============================= 32 passed in 20.38s =============================

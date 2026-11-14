@@ -1,0 +1,44 @@
+name: Collector security checks
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - "maquetaot-collector/**"
+      - ".github/workflows/collector-security.yml"
+  pull_request:
+    paths:
+      - "maquetaot-collector/**"
+
+permissions:
+  contents: read
+
+jobs:
+  collector:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: maquetaot-collector
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Instalar dependencias y herramientas
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
+          python -m pip install pytest bandit pip-audit cyclonedx-bom
+      - name: Pruebas (pytest)
+        run: python -m pytest -v
+      - name: SAST (Bandit)
+        run: python -m bandit -r collector_opcua.py
+      - name: SCA (pip-audit)
+        run: python -m pip_audit -r requirements.txt
+      - name: SBOM (CycloneDX)
+        run: cyclonedx-py requirements requirements.txt --of JSON -o sbom/collector-sbom.cdx.json
+      - name: Guardar SBOM como artefacto
+        uses: actions/upload-artifact@v4
+        with:
+          name: collector-sbom
+          path: maquetaot-collector/sbom/collector-sbom.cdx.json
